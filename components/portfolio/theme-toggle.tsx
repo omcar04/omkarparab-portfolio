@@ -16,13 +16,7 @@ function getPreferredTheme(): Theme {
     return storedTheme;
   }
 
-  if (typeof window.matchMedia !== "function") {
-    return "dark";
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  return "dark";
 }
 
 function applyTheme(theme: Theme) {

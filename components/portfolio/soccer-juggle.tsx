@@ -5,6 +5,7 @@ import { useEffect, useRef, useState, type PointerEvent } from "react";
 
 const AREA_HEIGHT = 280;
 const BALL_SIZE = 40;
+const BALL_HITBOX_SIZE = 64;
 const GRAVITY = 0.22;
 const BOUNCE = 0.8;
 const FRICTION = 0.995;
@@ -46,7 +47,7 @@ export default function SoccerJuggle() {
     function placeBallAtRest() {
       const areaWidth = areaRef.current?.clientWidth ?? 320;
       const nextPosition = {
-        x: areaWidth / 2 - BALL_SIZE / 2,
+        x: areaWidth / 2 - BALL_HITBOX_SIZE / 2,
         y: AREA_HEIGHT - BALL_SIZE - 34,
       };
 
@@ -88,7 +89,7 @@ export default function SoccerJuggle() {
     };
 
     const areaWidth = areaRef.current?.clientWidth ?? 320;
-    const maxX = Math.max(areaWidth - BALL_SIZE, 0);
+    const maxX = Math.max(areaWidth - BALL_HITBOX_SIZE, 0);
     const maxY = AREA_HEIGHT - BALL_SIZE - 34;
 
     if (nextPosition.x <= 0 || nextPosition.x >= maxX) {

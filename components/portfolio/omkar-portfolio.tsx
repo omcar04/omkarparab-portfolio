@@ -101,14 +101,20 @@ function SkillIcon({ icon, name }: { icon: string; name: string }) {
 
 export default function OmkarPortfolio() {
   return (
-    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
+    <div
+      id="top"
+      className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300"
+    >
       <main className="mx-auto max-w-7xl px-6 py-8 md:px-10 lg:px-12">
         <nav className="sticky top-0 z-40 -mx-6 flex items-center justify-between border-b border-[var(--border)] bg-[color:color-mix(in_srgb,var(--background)_88%,transparent)] px-6 py-5 backdrop-blur md:-mx-10 md:px-10 lg:-mx-12 lg:px-12">
-          <div className="flex items-center gap-2 font-mono text-sm font-semibold uppercase tracking-[0.16em] text-[var(--foreground)]">
+          <a
+            href="#top"
+            className="flex items-center gap-2 font-mono text-sm font-semibold uppercase tracking-[0.16em] text-[var(--foreground)] transition hover:opacity-80"
+          >
             <span>Omkar Parab</span>
             <span className="inline-block text-[var(--accent)]">/</span>
             <span>Problem Solver</span>
-          </div>
+          </a>
           <div className="flex items-center gap-4">
             <div className="hidden items-center gap-8 text-sm text-[var(--muted)] md:flex">
               <a
@@ -161,7 +167,7 @@ export default function OmkarPortfolio() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="https://drive.google.com/file/d/1SM5gC3TbJMhQvtc63nWjphOnsqy72_aO/view?usp=sharing"
+                href="https://drive.google.com/file/d/1SwHhwtCBAhXt91cwOh9MJkEieIMdY71D/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="border border-[var(--button-primary-bg)] bg-[var(--button-primary-bg)] px-6 py-3 text-sm font-medium text-[var(--button-primary-text)] transition hover:opacity-90"
