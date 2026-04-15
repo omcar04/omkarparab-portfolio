@@ -359,14 +359,18 @@ export default function OmkarPortfolio() {
             </p>
           </div>
 
-          <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+          <div className="relative border-y border-[var(--border)]">
+            <div
+              aria-hidden="true"
+              className="absolute top-8 bottom-8 left-[5px] w-px bg-[color:color-mix(in_srgb,var(--muted-2)_55%,var(--border))]"
+            />
             {experience.map((item) => (
               <div
                 key={item.company}
                 className="grid gap-5 py-8 md:grid-cols-[120px_220px_1fr] md:items-start"
               >
-                <div className="flex items-center md:pt-1">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
+                <div className="relative flex items-center md:pt-1">
+                  <span className="relative z-10 h-2.5 w-2.5 rounded-full bg-[var(--accent)] ring-4 ring-[var(--background)]" />
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.18em] text-[var(--muted-3)]">
