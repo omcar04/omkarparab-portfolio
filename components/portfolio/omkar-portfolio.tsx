@@ -362,14 +362,14 @@ export default function OmkarPortfolio() {
           <div className="relative border-y border-[var(--border)]">
             <div
               aria-hidden="true"
-              className="absolute top-8 bottom-8 left-[5px] w-px bg-[color:color-mix(in_srgb,var(--muted-2)_55%,var(--border))]"
+              className="absolute top-8 bottom-8 left-3 w-px bg-[color:color-mix(in_srgb,var(--muted-2)_55%,var(--border))]"
             />
             {experience.map((item) => (
               <div
                 key={item.company}
-                className="grid gap-5 py-8 md:grid-cols-[120px_220px_1fr] md:items-start"
+                className="grid grid-cols-[1.5rem_minmax(0,1fr)] gap-x-5 gap-y-3 py-8 md:grid-cols-[1.5rem_220px_minmax(0,1fr)] md:gap-y-0 md:items-start"
               >
-                <div className="relative flex items-center md:pt-1">
+                <div className="relative flex justify-center md:justify-center md:pt-1">
                   <span className="relative z-10 h-2.5 w-2.5 rounded-full bg-[var(--accent)] ring-4 ring-[var(--background)]" />
                 </div>
                 <div>
@@ -380,7 +380,7 @@ export default function OmkarPortfolio() {
                     {item.title}
                   </h3>
                 </div>
-                <p className="max-w-2xl text-sm leading-7 text-[var(--text-soft)]">
+                <p className="col-start-2 max-w-2xl text-sm leading-7 text-[var(--text-soft)] md:col-start-3">
                   {item.blurb}
                 </p>
               </div>
